@@ -101,9 +101,21 @@ CUDA_VISIBLE_DEVICES = 0 python eval.py --dataset_path ./data/images/ --identify
 # 致谢
 感谢百度PaddlePaddle深度学习框架提供的支持。
 
+## paddlemm 使用示例：
+```
+from paddlemm import PaddleMM
 
-安装
-```apt install openjdk-8-jdk
-paraphrase-en.gz
-stanford-corenlp-full-2015-12-09.zip
-stanford-corenlp-3.6.0-models.jar```
+# config: Model running parameters, see configs/
+# data_root: Path to dataset
+# image_root: Path to images
+# gpu: Which gpu to use
+
+runner = PaddleMM(config='configs/cmml.yml',
+                  data_root='data/COCO', 
+                  image_root='data/COCO/images', 
+                  out_root='experiment/cmml_paddle',
+                  gpu=0)
+
+runner.train()
+runner.test()
+```
