@@ -119,3 +119,16 @@ runner = PaddleMM(config='configs/captioning/aoanet_xe.yml',
 runner.train()
 runner.test()
 ```
+
+
+```
+'Bleu_1': 0.7729384559899702, 
+'Bleu_2': 0.6163398035383025, 
+'Bleu_3': 0.4790123137715982, 
+'Bleu_4': 0.36944349063530374, 
+'METEOR': 0.2848188431924821, 
+'ROUGE_L’: A0.5729849683867054, 
+'CIDEr': 1.1842173801790759, 
+'SPICE': 0.21650786258302354
+```
+
