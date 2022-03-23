@@ -110,10 +110,10 @@ from paddlemm import PaddleMM
 # image_root: Path to images
 # gpu: Which gpu to use
 
-runner = PaddleMM(config='configs/cmml.yml',
+runner = PaddleMM(config='configs/captioning/aoanet_xe.yml',
                   data_root='data/COCO', 
                   image_root='data/COCO/images', 
-                  out_root='experiment/cmml_paddle',
+                  out_root='experiment/aoanet_paddle',
                   gpu=0)
 
 runner.train()
