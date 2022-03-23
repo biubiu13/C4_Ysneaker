@@ -28,6 +28,17 @@
 └── README.md
 </pre>
 
+
+## 数据集文件目录
+<pre>
+<font color="#729FCF"><b>.</b></font>
+├── <font color="#729FCF"><b>data</b></font> 
+│   ├── <font color="#729FCF"><b>images</b></font>           # 原始图片
+│   ├── <font color="#729FCF"><b>feat</b></font>             # Faster-RCNN提取的图像区域特征
+│   ├── <font color="#729FCF"><b>feat</b></font>             # Faster-RCNN提取的图像区域的位置信息
+│   └── dataset.json        # 文本、数据集划分、标签等
+</pre>
+
 ## 模型训练
 ### 准备数据
 #### 多视图球鞋鉴定
