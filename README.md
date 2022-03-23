@@ -132,3 +132,11 @@ runner.test()
 'SPICE': 0.21650786258302354
 ```
 
+
+```
+"image_id": 422750, "caption": "a group of people sitting around a table with wine glasses", 
+"image_id": 225095, "caption": "a man drinking from a wine glass", 
+"image_id": 448912, "caption": "a group of people standing around a table with wine bottles", 
+"image_id": 355939, "caption": "a group of people standing around a bar with wine glasses", 
+"image_id": 155724, "caption": "a group of wine glasses sitting on a bar"
+```
