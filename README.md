@@ -29,16 +29,6 @@
 </pre>
 
 
-## 数据集文件目录
-<pre>
-<font color="#729FCF"><b>.</b></font>
-├── <font color="#729FCF"><b>data</b></font> 
-│   ├── <font color="#729FCF"><b>images</b></font>           # 原始图片
-│   ├── <font color="#729FCF"><b>feat</b></font>             # Faster-RCNN提取的图像区域特征
-│   ├── <font color="#729FCF"><b>box</b></font>             # Faster-RCNN提取的图像区域的位置信息
-│   └── dataset.json      # 文本、数据集划分、标签等
-</pre>
-
 ## 模型训练
 ### 准备数据
 #### 多视图球鞋鉴定
@@ -100,43 +90,3 @@ CUDA_VISIBLE_DEVICES = 0 python eval.py --dataset_path ./data/images/ --identify
 
 # 致谢
 感谢百度PaddlePaddle深度学习框架提供的支持。
-
-## paddlemm 使用示例：
-```
-from paddlemm import PaddleMM
-
-# config: Model running parameters, see configs/
-# data_root: Path to dataset
-# image_root: Path to images
-# gpu: Which gpu to use
-
-runner = PaddleMM(config='configs/captioning/aoanet_xe.yml',
-                  data_root='data/COCO', 
-                  image_root='data/COCO/images', 
-                  out_root='experiment/aoanet_paddle',
-                  gpu=0)
-
-runner.train()
-runner.test()
-```
-
-
-```
-'Bleu_1': 0.7729384559899702, 
-'Bleu_2': 0.6163398035383025, 
-'Bleu_3': 0.4790123137715982, 
-'Bleu_4': 0.36944349063530374, 
-'METEOR': 0.2848188431924821, 
-'ROUGE_L’: A0.5729849683867054, 
-'CIDEr': 1.1842173801790759, 
-'SPICE': 0.21650786258302354
-```
-
-
-```
-"image_id": 422750, "caption": "a group of people sitting around a table with wine glasses", 
-"image_id": 225095, "caption": "a man drinking from a wine glass", 
-"image_id": 448912, "caption": "a group of people standing around a table with wine bottles", 
-"image_id": 355939, "caption": "a group of people standing around a bar with wine glasses", 
-"image_id": 155724, "caption": "a group of wine glasses sitting on a bar"
-```
